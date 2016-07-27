@@ -1,8 +1,55 @@
+
 body {
   padding-top: 50px;
 }
 
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+.intro {
+  width: 100%;
+  height: 100%;
+  background: url(../img/academic-plaza2.jpg) no-repeat bottom center scroll;
+  background-color: #000;
+  background-size: cover;
+}
+
+.intro .intro-body {
+  color: #600000;
+}
+
+.intro .transbox {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, .65);
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  left: 50px;
+  top: 100px;
+}
+
+.intro .brand-heading {
+  font-size: 5em;
+}
+
+.intro .intro-text {
+  font-size: 1.9em;
+}
+
+@media(max-width:767px) {
+
+  .intro .transbox {
+    left: 0px;
+    top: 100px;
+    width: 100%;
+  }
+
+  .intro .intro-body {
+    text-align: center;
+  }
+
+  .intro .brand-heading {
+    font-size: 4em;
+  }
+
+  .intro .intro-text {
+    font-size: 1.5em;
+  }
 }
