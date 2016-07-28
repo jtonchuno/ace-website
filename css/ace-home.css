@@ -2,24 +2,35 @@
 
 /* Basic Elements ---------------------------------------------------------- */
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #600000;
 }
 
 body {
-  font-family: 'Roboto Slab';
   width: 100%;
   height: 100%;
+  font-family: 'Roboto Slab';
   background-color: #FEFDFB;
 }
 
 h1 hr {
   color: #600000;             /* IE7+ */
   border-color: #600000;      /* Chrome and Safari */
-  background-coolor: #600000; /* Firefox and Opera */
+  background-color: #600000; /* Firefox and Opera */
+  max-width: 900px;
 }
 
-/* Navbar */
+section {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+/* Navbar ------------------------------------------------------------------ */
 .navbar-nav li a {
   line-height: 20px;
 }
@@ -28,7 +39,8 @@ h1 hr {
 .intro {
   width: 100%;
   height: 100%;
-  background: url(../img/academic-plaza2-small.jpg) no-repeat center scroll;
+  background: url(../img/msc.jpg) no-repeat center scroll;
+  /*background: url(../img/academic-plaza2-small.jpg) no-repeat center scroll;*/
   background-color: #ffffff;
   background-size: cover;
 }
@@ -71,12 +83,19 @@ h1 hr {
   font-size: 1.4em;
 }
 
+/* Contact Us Section ------------------------------------------------------ */
+
+#contact {
+  width: 100%;
+  background-color: #F0DFC9; 
+}
+
 /* Resizing for larger screens --------------------------------------------- */
 
 @media(min-width:768px) {
   
   .intro {
-    background: url(../img/academic-plaza2.jpg) no-repeat center scroll;
+    background: url(../img/msc.jpg) no-repeat center scroll;
     background-color: #ffffff;
     background-size: cover;
   }
