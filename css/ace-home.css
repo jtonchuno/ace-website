@@ -1,10 +1,30 @@
+/* Builds mobile version first, expands to desktop sizes */
 
-/* build for mobile first */
+/* Basic Elements ---------------------------------------------------------- */
 
+h1, h2, h3, h4, h5, h6 {
+  color: #600000;
+}
+
+body {
+  font-family: 'Roboto Slab';
+  width: 100%;
+  height: 100%;
+  background-color: #FEFDFB;
+}
+
+h1 hr {
+  color: #600000;             /* IE7+ */
+  border-color: #600000;      /* Chrome and Safari */
+  background-coolor: #600000; /* Firefox and Opera */
+}
+
+/* Navbar */
 .navbar-nav li a {
   line-height: 20px;
 }
 
+/* Intro Section ----------------------------------------------------------- */
 .intro {
   width: 100%;
   height: 100%;
@@ -28,7 +48,6 @@
 }
 
 .intro .intro-body {
-  color: #600000;
   text-align: center;
 }
 
@@ -38,7 +57,21 @@
 
 .intro .intro-text {
   font-size: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+/* About Section ----------------------------------------------------------- */
+
+#about h1 {
+  font-size: 4em;
+}
+
+#about p {
+  font-size: 1.4em;
+}
+
+/* Resizing for larger screens --------------------------------------------- */
 
 @media(min-width:768px) {
   
