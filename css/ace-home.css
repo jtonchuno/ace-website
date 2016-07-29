@@ -1,14 +1,46 @@
+/* Builds mobile version first, expands to desktop sizes */
 
-/* build for mobile first */
+/* Basic Elements ---------------------------------------------------------- */
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #600000;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto Slab';
+  background-color: #FEFDFB;
+}
+
+h1 hr {
+  color: #600000;             /* IE7+ */
+  border-color: #600000;      /* Chrome and Safari */
+  background-color: #600000; /* Firefox and Opera */
+  max-width: 900px;
+}
+
+section {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+/* Navbar ------------------------------------------------------------------ */
 .navbar-nav li a {
   line-height: 20px;
 }
 
+/* Intro Section ----------------------------------------------------------- */
 .intro {
   width: 100%;
   height: 100%;
-  background: url(../img/academic-plaza2-small.jpg) no-repeat center scroll;
+  background: url(../img/msc.jpg) no-repeat center scroll;
+  /*background: url(../img/academic-plaza2-small.jpg) no-repeat center scroll;*/
   background-color: #ffffff;
   background-size: cover;
 }
@@ -28,7 +60,6 @@
 }
 
 .intro .intro-body {
-  color: #600000;
   text-align: center;
 }
 
@@ -38,12 +69,33 @@
 
 .intro .intro-text {
   font-size: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+/* About Section ----------------------------------------------------------- */
+
+#about h1 {
+  font-size: 4em;
+}
+
+#about p {
+  font-size: 1.4em;
+}
+
+/* Contact Us Section ------------------------------------------------------ */
+
+#contact {
+  width: 100%;
+  background-color: #F0DFC9; 
+}
+
+/* Resizing for larger screens --------------------------------------------- */
 
 @media(min-width:768px) {
   
   .intro {
-    background: url(../img/academic-plaza2.jpg) no-repeat center scroll;
+    background: url(../img/msc.jpg) no-repeat center scroll;
     background-color: #ffffff;
     background-size: cover;
   }
