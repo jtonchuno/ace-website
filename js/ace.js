@@ -1,6 +1,7 @@
-var bg = jQuery("#bg1, #bg2");
-jQuery(window).resize("resizeBackground");
-function resizeBackground() {
-  bg.height(jQuery(window).height() + 60);
-}
-resizeBackground();
+
+// Toggles mobile navbar when item selected
+$('.navbar-collapse ul li a').click(function() {
+    $('.navbar-toggle:visible').click();
+});
+
+
