@@ -4,6 +4,11 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// Set inverval between carousel transitions
+//  $('.carousel').carousel({
+//    interval: 1000*6
+//  });
+
 // Smooth scrolling on anchor links
 $("#nav ul li a[href^='#']").on('click', function(e) {
    // prevent default anchor click behavior
@@ -21,8 +26,10 @@ $("#nav ul li a[href^='#']").on('click', function(e) {
 
 });
 
+// Active navbar link based on scroll location
+
 // Cache selectors
-var topMenu = $(".navbar-custom"),
+var topMenu = $(".navbar-default"),
     topMenuHeight = topMenu.outerHeight()+15,
     // All list items
     menuItems = topMenu.find('a[href^="#"]'),
@@ -35,7 +42,7 @@ var topMenu = $(".navbar-custom"),
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+   var fromTop = $(this).scrollTop()+topMenuHeight +100;
 
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
