@@ -81,15 +81,8 @@
 /* Calendar ---------------------------------------------------------------- */
 
 #calendar {
-  width: auto;
-  height: auto;
-  background-color: wheat;
-}
-
-#calendar iframe {
   width: 100%;
-  height: 600px;
-  max-width: 900px;
+  background-color: wheat;
 }
 
 /* Contact Us Section ------------------------------------------------------ */
