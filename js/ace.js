@@ -42,7 +42,7 @@ var topMenu = $(".navbar-default"),
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight +100;
+   var fromTop = $(this).scrollTop()+topMenuHeight; // +100;
 
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
