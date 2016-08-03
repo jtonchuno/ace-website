@@ -1,0 +1,94 @@
+/* Builds mobile version first, expands to desktop sizes 
+ 
+ Palette:
+  white, ivory, wheat, #600000
+
+/* Basic Elements ---------------------------------------------------------- */
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #600000;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+body {
+  padding-top: 30px;
+  font-family: 'Roboto Slab';
+  background-color: ivory;
+}
+
+footer {
+  font-size: 1em;
+}
+
+h1 hr {
+  color: #600000;             /* IE7+ */
+  border-color: #600000;      /* Chrome and Safari */
+  background-color: #600000;  /* Firefox and Opera */
+  max-width: 900px;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 1.4em;
+  }
+}
+
+/* Navbar ------------------------------------------------------------------ */
+
+.navbar-default {
+  background-color: #600000;
+  border-color: #600000;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #600000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #600000;
+  background-color: white;
+}
+

@@ -10,7 +10,7 @@ $('.navbar-collapse ul li a').click(function() {
 //  });
 
 // Smooth scrolling on anchor links
-$("#nav ul li a[href^='#']").on('click', function(e) {
+$("a[href^='#']").on('click', function(e) {
    // prevent default anchor click behavior
    e.preventDefault();
    // store hash
@@ -42,7 +42,7 @@ var topMenu = $(".navbar-default"),
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight +100;
+   var fromTop = $(this).scrollTop()+topMenuHeight; // +100;
 
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
