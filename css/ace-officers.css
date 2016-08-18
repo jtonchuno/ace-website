@@ -1,6 +1,6 @@
 
-h1 {
-  padding-top: 10px;
+h2 {
+  margin-top: 0px;
 }
 
 /* XM Screens */
@@ -15,7 +15,6 @@ h1 {
   h2 {
     font-size: 2em;
   }
-
 }
 
 /* MD Screens */
@@ -23,20 +22,18 @@ h1 {
   h2 {
     font-size: 2em;
   }
-
 }
 
 /* LG Screens */
 @media (min-width: 992px) {
   h2 {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
-
 }
 
 /* XL Screens */
 @media (min-width: 1200px) {
   h2 {
-    font-size: 2em;
+    font-size: 1.4em;
   }
 }

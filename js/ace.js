@@ -1,8 +1,8 @@
 
 // Toggles mobile navbar when item selected
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+//$('.navbar-collapse ul li a').click(function() {
+//    $('.navbar-toggle:visible').click();
+//});
 
 // Set inverval between carousel transitions
 //  $('.carousel').carousel({
@@ -56,4 +56,23 @@ $(window).scroll(function(){
    menuItems
      .parent().removeClass("active")
      .end().filter("[href='#"+id+"']").parent().addClass("active");
+});
+
+// Fixes background jump on mobile
+$(function(){
+
+  var $w = $(window),
+      $background = $('#background');
+
+  // Fix background image jump on mobile
+  if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+    $background.css({'top': 'auto', 'bottom': 0});
+
+    $w.resize(sizeBackground);
+    sizeBackground();
+  }
+
+  function sizeBackground() {
+     $background.height(screen.height);
+  }
 });
