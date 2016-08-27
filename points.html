@@ -8,7 +8,7 @@
 	<form name="form" action="" method="GET">
 		<div>
 			<label>Event Title: </label>
-			<input type="text" name="title" value="">
+			<input type="text" name="title" value="Party">
 		</div>
 		<br><br>
 		<div>
@@ -21,19 +21,28 @@
 		<br><br>
 		<div>
 			<label>Points Per Entry: </label>
-			<input type="text" name="points" value="">
+			<input type="text" name="points" value="10">
 		</div>
-		<br><br>
+		<br>
 		<input type="button" name="submit" value="Create" onClick="Submit(this.form)">
 	</form>
 	<script>
 	function Submit (form) {
+
+		var title = form.title.value;
+		var points = form.points.value;
 		for (var i = 0; i < form.type.length; i++) {
 			if (form.type[i].checked)
 				var type = form.type[i].value;
 		}
-		alert ("title: " + form.title.value + " type: " + type + " points: " + form.points.value);
+		var entry = document.getElementById("entry");
+		entry.innerHTML = "<h1>" + title + "</h1>" +
+								"<label>Enter Name: </label>" +
+								"<input type=\"text\" name=\"name\">"
 	}
 	</script>
+	<br><br>
+	<div id="entry">
+	</div>
 </body>
 </html>
