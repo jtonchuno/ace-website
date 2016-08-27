@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Aggie Club of Engineers Point Tracker</h1>
+	<br>
+	<form name="form" action="" method="GET">
+		<div>
+			<label>Event Title: </label>
+			<input type="text" name="title" value="">
+		</div>
+		<br><br>
+		<div>
+			<label>Point Type: </label>
+			<input type="radio" name="type" value="service" checked> Service
+			<input type="radio" name="type" value="fundraising"> Fundraising
+			<input type="radio" name="type" value="brotherhood"> Brotherhood
+			<input type="radio" name="type" value="academic"> Academic
+		</div>
+		<br><br>
+		<div>
+			<label>Points Per Entry: </label>
+			<input type="text" name="points" value="">
+		</div>
+		<br><br>
+		<input type="button" name="submit" value="Create" onClick="Submit(this.form)">
+	</form>
+	<script>
+	function Submit (form) {
+		for (var i = 0; i < form.type.length; i++) {
+			if (form.type[i].checked)
+				var type = form.type[i].value;
+		}
+		alert ("title: " + form.title.value + " type: " + type + " points: " + form.points.value);
+	}
+	</script>
+</body>
+</html>
