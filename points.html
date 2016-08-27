@@ -5,27 +5,34 @@
 <body>
 	<h1>Aggie Club of Engineers Point Tracker</h1>
 	<br>
-	<form name="form" action="" method="GET">
-		<div>
-			<label>Event Title: </label>
-			<input type="text" name="title" value="Party">
-		</div>
-		<br><br>
-		<div>
-			<label>Point Type: </label>
-			<input type="radio" name="type" value="service" checked> Service
-			<input type="radio" name="type" value="fundraising"> Fundraising
-			<input type="radio" name="type" value="brotherhood"> Brotherhood
-			<input type="radio" name="type" value="academic"> Academic
-		</div>
-		<br><br>
-		<div>
-			<label>Points Per Entry: </label>
-			<input type="text" name="points" value="10">
-		</div>
-		<br>
-		<input type="button" name="submit" value="Create" onClick="Submit(this.form)">
-	</form>
+	<div id="event">
+		<h2>Create Event</h2>
+		<form name="form" action="" method="GET">
+			<div>
+				<label>Event Title: </label>
+				<input type="text" name="title" value="Party">
+			</div>
+			<br><br>
+			<div>
+				<label>Point Type: </label>
+				<input type="radio" name="type" value="service" id="service" checked>
+				<label for="service">Service</label>
+				<input type="radio" name="type" value="fundraising" id="fundraising">
+				<label for="fundraising">Fundraising</label>
+				<input type="radio" name="type" value="brotherhood" id="brotherhood">
+				<label for="brotherhood">Brotherhood</label>
+				<input type="radio" name="type" value="academic" id="academic">
+				<label for="academic">academic</label>
+			</div>
+			<br><br>
+			<div>
+				<label>Points Per Entry: </label>
+				<input type="text" name="points" value="10">
+			</div>
+			<br>
+			<input type="button" name="submit" value="Create" onClick="Submit(this.form)">
+		</form>
+	</div>
 	<script>
 	function Submit (form) {
 
@@ -35,13 +42,14 @@
 			if (form.type[i].checked)
 				var type = form.type[i].value;
 		}
+
+		document.getElementById("event").innerHTML = "";
 		var entry = document.getElementById("entry");
-		entry.innerHTML = "<h1>" + title + "</h1>" +
+		entry.innerHTML = "<h2>" + title + "</h2>" +
 								"<label>Enter Name: </label>" +
 								"<input type=\"text\" name=\"name\">"
 	}
 	</script>
-	<br><br>
 	<div id="entry">
 	</div>
 </body>
