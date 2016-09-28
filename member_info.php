@@ -16,6 +16,7 @@ if(_POST)
 	$phone_number = $_POST['phone_number'];
 
 	// Data validation
+	if(!$uin) { die("UIN was not entered"); }
 	$joined = $joined . '-01';
 	$graduation = $graduation . '-01';
 
